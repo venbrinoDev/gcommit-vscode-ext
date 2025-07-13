@@ -58,7 +58,7 @@ export async function runGCommit() {
         });
 
         if (!key) {
-            vscode.window.showWarningMessage("No API key provided.");
+            vscode.window.showWarningMessage("No API key provided.",);
             return;
         }
 
@@ -69,7 +69,10 @@ export async function runGCommit() {
     // 📝 Get unstaged files (✅ with cwd)
     const unstaged = await listUnstagedFiles(cwd);
     if (!unstaged.length) {
-        vscode.window.showInformationMessage("No unstaged files.");
+        vscode.window.showInformationMessage(
+            "No unstaged files found.",
+            { modal: true }
+        );
         return;
     }
 
@@ -79,7 +82,9 @@ export async function runGCommit() {
     });
 
     if (!selected || selected.length === 0) {
-        vscode.window.showWarningMessage("No files selected.");
+        vscode.window.showWarningMessage("No files selected.",
+            { modal: true }
+        );
         return;
     }
 
@@ -89,7 +94,9 @@ export async function runGCommit() {
     // 🔍 Generate git diff (✅ with cwd)
     const diff = await getGitDiff(cwd);
     if (!diff) {
-        vscode.window.showInformationMessage("No changes detected.");
+        vscode.window.showInformationMessage("No changes detected.",
+            { modal: true }
+        );
         return;
     }
 
@@ -113,7 +120,7 @@ export async function runGCommit() {
     // ✅ Confirm and commit (✅ with cwd)
     const shouldCommit = await vscode.window.showQuickPick(
         ["Commit", "Cancel"],
-        { placeHolder: "Commit with this message?" }
+
     );
 
     if (shouldCommit === "Commit") {

@@ -1,71 +1,92 @@
-# gcommit README
+# 🚀 gcommit for VS Code
 
-This is the README for your extension "gcommit". After writing up a brief description, we recommend including the following sections.
+Generate AI-powered, conventional Git commit messages right from VS Code — powered by OpenAI.
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+[![VS Code](https://img.shields.io/visual-studio-marketplace/v/your-publisher.gcommit)](https://marketplace.visualstudio.com/items?itemName=your-publisher.gcommit)
+[![npm](https://img.shields.io/npm/v/gcommit-ai)](https://www.npmjs.com/package/gcommit-ai)
+[![License](https://img.shields.io/github/license/venbrinoDev/gcommit-cli)](LICENSE)
 
 ---
 
-## Following extension guidelines
+## ✨ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- Detects unstaged Git changes in your workspace
+- Lets you select which files to stage
+- Generates commit messages using OpenAI based on your git diff
+- Conforms to [Conventional Commits](https://www.conventionalcommits.org/)
+- Lets you review or edit the message before committing
+- One-click commit from within VS Code
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## 📸 Preview
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+Coming soon – GIF showing usage flow.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## 🔧 Usage
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+1. Open a folder that is a Git repository
+2. Open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`)
+3. Run `GCommit: Generate Commit Message`
+4. Select files to include in the commit
+5. View or edit the AI-generated message
+6. Click ✅ Commit!
 
-**Enjoy!**
+---
+
+## 🧠 First Time Setup
+
+The first time you run the extension, it will ask for your **OpenAI API Key**.
+
+To update it later, use:
+
+
+You can also configure:
+- `GCOMMIT_MODEL` – default: `gpt-4o-mini`
+- `GCOMMIT_AUTO_COMMIT` – default: `false`
+
+---
+
+## ⚙️ Requirements
+
+- A Git-enabled VS Code workspace
+- An OpenAI API key
+
+---
+
+## 📁 Extension Commands
+
+| Command | Description |
+|--------|-------------|
+| `GCommit: Generate Commit Message` | Analyze changes and generate a commit message |
+| `GCommit: Set OpenAI API Key`      | Configure your OpenAI key for generation |
+
+---
+
+## 🐛 Known Issues
+
+- Doesn't support multi-root workspaces yet
+- No offline mode — requires internet access to OpenAI
+
+---
+
+## 📝 Release Notes
+
+### 0.1.0
+
+- Initial release
+- Supports commit generation, API key saving, and one-click commits
+
+---
+
+## 🙏 Credits
+
+Built on [`gcommit-ai`](https://www.npmjs.com/package/gcommit-ai) by [venbrinoDev](https://github.com/venbrinoDev). Uses `simple-git`, `OpenAI`, and `VS Code API`.
+
+---
+
+## 📄 License
+
+MIT © 2025 [venbrinoDev](https://github.com/venbrinoDev)
