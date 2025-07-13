@@ -6,9 +6,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
-## [Unreleased]
-
 ### Added
+
 - Initial implementation of `gcommit` extension
 - AI-powered commit message generation using OpenAI API
 - Support for staging selected files within VS Code
@@ -21,7 +20,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.1.0] – 2025-07-13
 
 ### Added
-- First  release 🎉
+
+- First release 🎉
 - VS Code command to trigger AI commit generation
 - Interactive UI flow: select files → generate → edit → commit
 - CLI fallback integration via `gcommit-ai`
