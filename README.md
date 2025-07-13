@@ -1,4 +1,4 @@
-# 🚀 gcommit for VS Code
+# gcommit
 
 Generate AI-powered, conventional Git commit messages right from VS Code — powered by OpenAI.
 
@@ -8,6 +8,11 @@ Generate AI-powered, conventional Git commit messages right from VS Code — pow
 
 ---
 
+🔗 [View Source on GitHub](https://github.com/venbrinoDev/gcommit-vscode-ext)
+
+💡 Powered by [`gcommit-ai`](https://www.npmjs.com/package/gcommit-ai)
+
+---
 ## ✨ Features
 
 - Detects unstaged Git changes in your workspace
@@ -42,8 +47,8 @@ The first time you run the extension, it will ask for your **OpenAI API Key**.
 
 To update it later, use:
 
-
 You can also configure:
+
 - `GCOMMIT_MODEL` – default: `gpt-4o-mini`
 - `GCOMMIT_AUTO_COMMIT` – default: `false`
 
@@ -58,19 +63,13 @@ You can also configure:
 
 ## 📁 Extension Commands
 
-| Command | Description |
-|--------|-------------|
-| `GCommit: Generate Commit Message` | Analyze changes and generate a commit message |
-| `GCommit: Set OpenAI API Key`      | Configure your OpenAI key for generation |
+| Command                            | Description                                   |
+| ---------------------------------- | --------------------------------------------- |
+| `gcommit: Generate Commit Message` | Analyze changes and generate a commit message |
+| `gcommit: Set OpenAI API Key`      | Configure your OpenAI key for generation      |
 
 ---
 
-## 🐛 Known Issues
-
-- Doesn't support multi-root workspaces yet
-- No offline mode — requires internet access to OpenAI
-
----
 
 ## 📝 Release Notes
 
@@ -83,8 +82,7 @@ You can also configure:
 
 ## 🙏 Credits
 
-Built on [`gcommit-ai`](https://www.npmjs.com/package/gcommit-ai) by [venbrinoDev](https://github.com/venbrinoDev). Uses `simple-git`, `OpenAI`, and `VS Code API`.
-
+#### Built on [`gcommit-ai`](https://www.npmjs.com/package/gcommit-ai) by [kingsley](https://github.com/kingsley-59/gcommit-cli)
 ---
 
 ## 📄 License
